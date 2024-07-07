@@ -14,7 +14,7 @@ tasks:
   swagger.gen:
     desc: Generate Go code
     cmds:
-    - GOFLAGS=-mod=mod go generate https://github.com/adcoutinho/go-rest-api/internal https://github.com/adcoutinho/go-rest-api/pkg/swagger
+    - GOFLAGS=-mod=mod go generate github.com/adcoutinho/go-rest-api/internal github.com/adcoutinho/go-rest-api/pkg/swagger
     
   swagger.validate:
     desc: Validate swagger
@@ -25,4 +25,3 @@ tasks:
     desc: Doc for swagger
     cmds: 
     - docker run -i yousan/swagger-yaml-to-html < pkg/swagger/swagger.yml > doc/index.html
-    
